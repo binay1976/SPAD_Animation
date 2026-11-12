@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPAD Railway Training Portal</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+    color: white;
+    background:
+        linear-gradient(135deg, rgba(5,18,35,.96), rgba(12,48,76,.91)),
+        url("https://images.unsplash.com/photo-1474487548417-781cb71495f3")
+        center/cover fixed;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 2px 7%;
+    background: rgba(0,0,0,.28);
+    border-bottom: 1px solid rgba(255,255,255,.15);
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    display: block;
+    object-fit: contain;
+    background: rgb(255, 254, 254);
+    border-radius: 12px;
+    padding: 5px;
+}
+
+.header h1 {
+    font-size: clamp(22px, 3vw, 34px);
+    letter-spacing: 1px;
+}
+
+.header p {
+    color: #b9d8ed;
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+.hero {
+    text-align: center;
+    padding: 65px 20px 35px;
+}
+
+.hero h2 {
+    font-size: clamp(30px, 5vw, 48px);
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.hero h2 span {
+    color: #ffbd45;
+}
+
+.hero p {
+    max-width: 720px;
+    margin: auto;
+    color: #d1e1ee;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+.section-title {
+    text-align: center;
+    margin: 25px 0 28px;
+    font-size: 23px;
+    color: #ffcf78;
+}
+
+.tests {
+    width: min(1100px, 90%);
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    padding-bottom: 65px;
+}
+
+.test-card {
+    text-decoration: none;
+    color: white;
+    background: rgba(255,255,255,.09);
+    border: 1px solid rgba(255,255,255,.19);
+    border-radius: 18px;
+    padding: 28px 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: .25s ease;
+}
+
+.test-card:hover {
+    transform: translateY(-7px);
+    background: rgba(255,255,255,.17);
+    border-color: #ffbd45;
+    box-shadow: 0 12px 30px rgba(0,0,0,.3);
+}
+
+.test-number {
+    width: 58px;
+    height: 58px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    background: #e9a52d;
+    color: #10263a;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.test-card h3 {
+    font-size: 21px;
+    margin-bottom: 9px;
+}
+
+.test-card p {
+    color: #c5d7e5;
+    font-size: 14px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #9db5c9;
+    background: rgba(0,0,0,.3);
+    font-size: 13px;
+}
+
+@media(max-width: 750px) {
+    .tests {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 480px) {
+    .header {
+        padding: 16px 5%;
+    }
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+    .tests {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+
+<section class="hero">
+    <h2>Welcome to <span>SPAD Animation</span></h2>
+    <p>
+        An interactive railway safety animation platform.
+        Select a SPAD case below to view the presentation
+        and understand different SPAD scenarios.
+    </p>
+</section>
+
+<h3 class="section-title">SELECT IR SPAD Cases Year Wise</h3>
+<p style="text-align: center; color: #9db5c9; font-size: 15px;">
+    @ BDTS1022
+</p>
+
+<section class="tests">
+
+    <a class="test-card" href="SPAD_2024-25.html">
+        <div class="test-number">1</div>
+        <h3>IR SPAD Case 2020-21</h3>
+        <p>SPAD Animation</p>
+    </a>
+
+    <a class="test-card" href="test2.html">
+        <div class="test-number">2</div>
+        <h3>IR SPAD Case 2021-22</h3>
+        <p>SPAD Animation</p>
+    </a>
+
+    <a class="test-card" href="test3.html">
+        <div class="test-number">3</div>
+        <h3>IR SPAD Case 2022-23</h3>
+        <p>SPAD Animation</p>
+    </a>
+
+    <a class="test-card" href="test4.html">
+        <div class="test-number">4</div>
+        <h3>IR SPAD Case 2023-24</h3>
+        <p>SPAD Animation</p>
+    </a>
+
+    <a class="test-card" href="SPAD_2024-25.html">
+        <div class="test-number">5</div>
+        <h3>IR SPAD Case 2024-25</h3>
+        <p>SPAD Animation</p>
+    </a>
+
+    <a class="test-card" href="test6.html">
+        <div class="test-number">6</div>
+        <h3>IR SPAD Case 2025-26</h3>
+        <p>SPAD Animation</p>
+    </a>
+</section>
+<footer class="footer">
+    BDTS1022 | IR SPAD Animation Portal | Safety First, Always
+</footer>
+
+</body>
+</html>
