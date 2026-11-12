@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SPAD Railway Training</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #101820;
+    font-family: Arial, sans-serif;
+}
+
+.viewer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    height: 48px;
+    flex-shrink: 0;
+    background: #142b40;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;
+}
+
+.header button {
+    border: 0;
+    background: #1684d8;
+    color: white;
+    padding: 9px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.presentation {
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+</style>
+</head>
+
+<body>
+
+<div class="viewer" id="viewer">
+
+    <header class="header">
+        <strong>SPAD TRAINING</strong>
+
+        <button onclick="toggleFullscreen()">
+            Full Screen
+        </button>
+    </header>
+
+    <main class="presentation">
+
+        <iframe
+            src="https://1drv.ms/p/c/0b04a56a93b5d7d7/IQTmlZUZHteBQLaf3ef2DiOPAbm3YEJdW9k9tg157wKLANc?em=2&wdAr=1.7777777777777777&wdEaaCheck=1"
+            title="SPAD Training Presentation"
+            allowfullscreen="true">
+        </iframe>
+
+    </main>
+
+</div>
+
+<script>
+function toggleFullscreen() {
+
+    const viewer = document.getElementById("viewer");
+
+    if (!document.fullscreenElement) {
+        viewer.requestFullscreen();
+    } else {
+        document.exitFullscreen();
+    }
+
+}
+</script>
+
+</body>
+</html>
